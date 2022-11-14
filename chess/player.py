@@ -9,6 +9,7 @@ class Player:
             second_row = 1
         elif first_row == 7:
             second_row = 6
+        self.color = color
         self.pieces = [
                 Piece('R', color, first_row, 0),
                 Piece('N', color, first_row, 1),

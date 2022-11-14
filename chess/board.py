@@ -12,5 +12,7 @@ class Board:
                 ]
 
     def __repr__(self):
-        return '\n'.join(['\t'.join([str(square) for square in row]) for row in self.board])
+        board = '\n'.join(['\t'.join([str(square) for square in row]) for row in self.board])
+        tab_length = 8 # python default 
+        return board + '\n' + ('-' * tab_length * 7)
 
