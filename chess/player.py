@@ -1,5 +1,4 @@
 from chess.piece import Piece
-from chess.color import Color
 
 class Player:
     def __init__(self, color, first_row):
