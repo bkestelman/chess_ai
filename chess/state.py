@@ -1,7 +1,7 @@
 class State:
     def __init__(self):
         self.feature_planes = [None, None, None]
-        WHITE = 0, BLACK = 1, MISC = 2
+        WHITE, BLACK, MISC = 0, 1, 2
         self.feature_planes[WHITE] = {
                 'P': init_pawns(),
                 'R': init_rooks(),
