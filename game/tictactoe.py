@@ -48,7 +48,7 @@ class TicTacToe(Game):
             np.any(self.state[self.player].sum(axis=0) == 3) or
             np.any(self.state[self.player].sum(axis=1) == 3) or
             self.state[self.player].trace() == 3 or
-            self.state[self.player].trace(axis1=1, axis2=0) == 3 
+            np.fliplr(self.state[self.player]).trace() == 3 
             )
 
 class InvalidMoveRepresentation(Exception):
