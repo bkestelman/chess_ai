@@ -43,12 +43,12 @@ class TicTacToe(Game):
     def legal_moves(self, move):
         raise NotImplemented()
 
-    def is_game_over(self):
+    def did_win(self, player):
         return (
-            np.any(self.state[self.player].sum(axis=0) == 3) or
-            np.any(self.state[self.player].sum(axis=1) == 3) or
-            self.state[self.player].trace() == 3 or
-            np.fliplr(self.state[self.player]).trace() == 3 
+            np.any(self.state[player].sum(axis=0) == 3) or
+            np.any(self.state[player].sum(axis=1) == 3) or
+            self.state[player].trace() == 3 or
+            np.fliplr(self.state[player]).trace() == 3 
             )
 
 class InvalidMoveRepresentation(Exception):
